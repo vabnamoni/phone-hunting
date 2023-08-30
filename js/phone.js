@@ -56,5 +56,9 @@ const toggleLoadingSpinner =(isLoading) =>{
     loadingSpinner.classList.add('hidden');
   }
 }
+//show all//
+const handleShowAll = () =>{
+  handlerSearch();
+}
 
 //loadPhone();
