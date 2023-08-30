@@ -32,7 +32,8 @@ const displayPhones = phones =>{
    phoneContainer.appendChild(phoneCard);
     })
         
-    
+  //hidden search button//
+  toggleLoadingSpinner(false);
 
 }
 
@@ -42,6 +43,18 @@ const handlerSearch =() =>{
    const searchText = searchFiled.value;
    console.log(searchText)
    loadPhone(searchText)
+   toggleLoadingSpinner(true);
+}
+
+//loading//
+const toggleLoadingSpinner =(isLoading) =>{
+  const loadingSpinner =document.getElementById('loading-spinner')
+  if(isLoading){
+  loadingSpinner.classList.remove('hidden')
+  }
+  else{
+    loadingSpinner.classList.add('hidden');
+  }
 }
 
 //loadPhone();
